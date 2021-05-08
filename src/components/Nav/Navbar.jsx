@@ -34,9 +34,9 @@ export default function Navbar() {
                 <Toolbar>
                 <a href="/"><img src="./icons/Logo-trim.png" className="nav-icon" style={{ flex: 0 }} /></a>
                 <div style={{ flex: 1 }}></div>
-                <Button style={{ flex: 0.1 }} color="secondary" href="/about">About</Button>
-                <Button style={{ flex: 0.1 }} color="secondary" href="/projects">Projects</Button>
-                <Button style={{ flex: 0.1 }} color="secondary" href="/contact">Contact</Button>
+                <Button style={{ flex: 0.1 }} color="secondary" href="/#/about">About</Button>
+                <Button style={{ flex: 0.1 }} color="secondary" href="/#/projects">Projects</Button>
+                <Button style={{ flex: 0.1 }} color="secondary" href="/#/contact">Contact</Button>
                 </Toolbar>
             </AppBar>
         </ThemeProvider>
