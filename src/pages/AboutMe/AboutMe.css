@@ -1,0 +1,36 @@
+.about {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% 90%;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.about-content {
+    display: flex;
+    font-size: xx-large;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: left;
+    align-items: center;
+    margin-top: -18%;
+    font-size: x-large;
+}
+
+.headshot {
+    border-radius: 50%;
+    width: 50%;
+    margin-top: -5%;
+}
+
+.highlight {
+    color: #19BFB7;
+    background-color: #202020;
+}
