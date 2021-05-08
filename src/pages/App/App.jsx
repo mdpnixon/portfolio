@@ -11,8 +11,8 @@ export default class App extends Component {
     render() {
         return (
         <div className="App">
-            <Navbar />
             <HashRouter basename='/'>
+                <Navbar />
                 <Route exact path="/" component={Home} />
                 <Route path="/about" component={AboutMe} />
                 <Route path="/projects" component={Projects} />

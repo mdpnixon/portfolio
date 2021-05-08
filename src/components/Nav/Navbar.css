@@ -1,3 +1,11 @@
 .nav-icon {
     height: 35px;
 }
+
+.link {
+    color: #19BFB7;
+}
+
+.link:hover {
+    color: #28e3da;
+}
