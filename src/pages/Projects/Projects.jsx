@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Project.css';
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import Button from '@material-ui/core/Button';
@@ -15,28 +15,32 @@ const theme = createMuiTheme({
 });
 
 function Projects() {
-    window.onload = function() {
-        let project = document.getElementsByClassName("project");
-        let id;
-        document.querySelectorAll('.project-icon').forEach(item => {
-            item.addEventListener('click', e => {
-                id = e.target.id
-                project[id].style.display = "block";
+    let [load, setLoad] = useState(false);
+    useEffect(() => {
+        setLoad(true)
+    })
+    if (load === true) {
+            let project = document.getElementsByClassName("project");
+            let id;
+            document.querySelectorAll('.project-icon').forEach(item => {
+                item.addEventListener('click', e => {
+                    id = e.target.id
+                    project[id].style.display = "block";
+                })
             })
-        })
+            
+            document.querySelectorAll('.close').forEach(item => {
+                item.addEventListener('click', e => {
+                    project[id].style.display = "none";
+                })
+            })
         
-        document.querySelectorAll('.close').forEach(item => {
-            item.addEventListener('click', e => {
-                project[id].style.display = "none";
-            })
-        })
-    
-        window.onclick = function(event) {
-            if (event.target.className == 'project') {
-                project[id].style.display = "none";
+            window.onclick = function(event) {
+                if (event.target.className === 'project') {
+                    project[id].style.display = "none";
+                }
             }
         }
-    }
     return (
         <>
         <div className='project-icons'>
