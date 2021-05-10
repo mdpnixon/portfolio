@@ -33,7 +33,7 @@ export default function Navbar() {
         <ThemeProvider theme={theme}>
             <AppBar color="primary" position="fixed">
                 <Toolbar>
-                <a href="/"><img src="./icons/Logo-trim.png" className="nav-icon" style={{ flex: 0 }} /></a>
+                <Link to="/"><img src="./icons/Logo-trim.png" className="nav-icon" style={{ flex: 0 }} /></Link>
                 <div style={{ flex: 1 }}></div>
                 {/* <Button style={{ flex: 0.1 }} color="secondary" href="/about">About</Button>
                 <Button style={{ flex: 0.1 }} color="secondary" href="/projects">Projects</Button>

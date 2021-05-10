@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import './ContactForm.css';
+import emailjs from 'emailjs-com';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import { withStyles } from "@material-ui/core/styles";
@@ -30,25 +31,40 @@ const theme = createMuiTheme({
 
 class ContactForm extends Component {
   state = {
-    email: "",
-    name: "",
+    user_email: "",
+    user_name: "",
     message: ""
   }
 
-  sendEmail = async (e) => {
+  sendEmail = (e) => {
     e.preventDefault();
-    let options = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email: this.state.email, name: this.state.name, message: this.state.message })
-    }
-    await fetch("/api/emails", options)
-      .then(response => response.json())
-      .then(serverData => {console.log("Success:", serverData)
-        this.setState({ email: "", name: "", message: "" })
-      })
-      .catch(error => {console.error("Error:", error)})
+
+    emailjs.sendForm('service_koms8rp', 'contact_form', e.target, 'user_xjEs6vxzVVakspNt893Bp')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      },
+      this.setState({ user_email: "", user_name: "", message: "" })
+      );
   }
+  // nodemailer logan's way
+  // sendEmail = async (e) => {
+  //   e.preventDefault();
+  //   let options = {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify({ email: this.state.email, name: this.state.name, message: this.state.message })
+  //   }
+  //   await fetch("/api/emails", options)
+  //     .then(response => response.json())
+  //     .then(serverData => {console.log("Success:", serverData)
+  //       this.setState({ email: "", name: "", message: "" })
+  //     })
+  //     .catch(error => {console.error("Error:", error)})
+  // }
+
+  // nodemailer original
   // sendEmail = (e) => {
   //   e.preventDefault();
   //   fetch("http://localhost:3000/api/emails", {
@@ -79,8 +95,8 @@ class ContactForm extends Component {
               label="Name"
               variant="filled"
               color="secondary"
-              name="name"
-              value={this.state.name}
+              name="user_name"
+              value={this.state.user_name}
               onChange={this.handleChange}
             />
             <br />
@@ -91,9 +107,9 @@ class ContactForm extends Component {
               defaultValue="Default Value"
               variant="filled"
               color="secondary"
-              name="email"
+              name="user_email"
               type="email"
-              value={this.state.email}
+              value={this.state.user_email}
               onChange={this.handleChange}
             />
             <br />
@@ -114,7 +130,6 @@ class ContactForm extends Component {
             <Button
               variant="contained"
               color="secondary"
-              // onClick={this.sendEmail}
               type="submit"
             >
               Send
