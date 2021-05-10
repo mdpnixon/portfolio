@@ -23,21 +23,3 @@ export default class App extends Component {
         );
     }
 }
-
-{/* <Switch>
-    <Route path='/about' render={(props) => (
-    <AboutMe {...props} />
-    )}/>
-    <Route path='/projects' render={(props) => (
-    <Projects {...props} />
-    )}/>
-    <Route path='/contact' render={(props) => (
-    <Contact {...props}/>
-    )}/>
-    <Route path='/' render={() => (
-    <div className="home">
-        <div className="home-logo"><img src="/icons/Logo.png" /></div>
-    </div>
-    )}/>
-    <Redirect to="/" />
-</Switch> */}

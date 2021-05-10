@@ -48,36 +48,6 @@ class ContactForm extends Component {
       this.setState({ user_email: "", user_name: "", message: "" })
       );
   }
-  // nodemailer logan's way
-  // sendEmail = async (e) => {
-  //   e.preventDefault();
-  //   let options = {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify({ email: this.state.email, name: this.state.name, message: this.state.message })
-  //   }
-  //   await fetch("/api/emails", options)
-  //     .then(response => response.json())
-  //     .then(serverData => {console.log("Success:", serverData)
-  //       this.setState({ email: "", name: "", message: "" })
-  //     })
-  //     .catch(error => {console.error("Error:", error)})
-  // }
-
-  // nodemailer original
-  // sendEmail = (e) => {
-  //   e.preventDefault();
-  //   fetch("http://localhost:3000/api/emails", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify({ email: this.state.email, name: this.state.name, message: this.state.message })
-  //   })
-  //   .then(response => response.json())
-  //     .then(serverData => {console.log("Success:", serverData)
-  //     this.setState({ email: "", name: "", message: "" })
-  //     })
-  //     .catch(error => {console.error("Error:", error)})
-  // }
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
