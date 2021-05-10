@@ -15,7 +15,7 @@ const theme = createMuiTheme({
 });
 
 function Projects() {
-    let [load, setLoad] = useState(false);
+    const [load, setLoad] = useState(false);
     useEffect(() => {
         setLoad(true)
     })
