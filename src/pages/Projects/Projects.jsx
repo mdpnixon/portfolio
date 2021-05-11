@@ -43,8 +43,8 @@ function Projects() {
         }
     return (
         <>
+        <h1>projects</h1>
         <div className='project-icons'>
-            <h1>projects</h1>
             <img className="project-icon" id="0" src="./icons/moose.png" />
             <img className="project-icon" id="1" src="./icons/streat.png" />
             <img className="project-icon" id="2" src="./icons/stack.png" />

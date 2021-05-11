@@ -1,5 +1,11 @@
+.project-icons {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
 .project-icon {
-    width: 10%;
+    width: 140px;
     margin: 20px;
     border-radius: 4%;
 }
@@ -31,7 +37,7 @@
 .project-content {
     background-color: #fefefe;
     color: #202020;
-    margin: 5% auto; /* 15% from the top and centered */
+    margin: 10% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
@@ -62,4 +68,10 @@
 
 a {
     text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .project-content {
+        margin-top: 25% auto;
+    }
 }

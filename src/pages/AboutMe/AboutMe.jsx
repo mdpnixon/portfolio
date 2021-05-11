@@ -7,7 +7,7 @@ function AboutMe() {
         <h1>about me</h1>
         <div><img className="headshot" src="./images/Headshot.jpg" /></div>
         <div className="about-content">
-        <p>hi! my name is matthew nixon and i'm a recent grad of the general assembly software engeering immersive bootcamp.<br /><br /> i'm a <mark className="highlight">full stack developer</mark> with a background in management who creates solutions that solve every-day problems with the goal to make tasks easier for the end user.</p>
+        <p>hi! my name is matthew nixon and i'm a recent grad of the general assembly software engeering immersive bootcamp.<br /><br /> i'm a <mark className="highlight">full stack developer</mark> with an extensive background in management who enjoys creating solutions that solve every-day problems with the goal to make tasks easier for the end-user.</p>
         </div>
       </div>
   );
