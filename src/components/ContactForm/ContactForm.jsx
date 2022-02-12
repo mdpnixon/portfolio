@@ -41,13 +41,20 @@ class ContactForm extends Component {
 
     emailjs.sendForm('service_koms8rp', 'contact_form', e.target, 'user_xjEs6vxzVVakspNt893Bp')
       .then((result) => {
-          console.log(result.text);
+        if (result.text == "OK") {
+          alert('Thank you for reaching out! I will be in touch very soon.')
+        } else {
+          alert('Apologies, something went wrong. If you would still like to get in touch, please email me at mdpnixon@gmail.com.')
+        }
+        console.log(result);
       }, (error) => {
-          console.log(error.text);
-      },
-      this.setState({ user_email: "", user_name: "", message: "" })
-      );
-  }
+        console.log(error.text);
+      }, this.setState({
+        user_email: "",
+        user_name: "",
+        message: ""
+      }));
+}
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });

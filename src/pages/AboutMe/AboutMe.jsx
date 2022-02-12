@@ -4,11 +4,16 @@ import './AboutMe.css';
 function AboutMe() {
   return (
       <div className="about">
-        <h1>about me</h1>
-        <div><img className="headshot" src="./images/Headshot.jpg" /></div>
-        <div className="about-content">
-        <p>hi! my name is matthew nixon and i'm a recent grad of the general assembly software engeering immersive bootcamp.<br /><br /> i'm a <mark className="highlight">full stack developer</mark> with an extensive background in management who enjoys creating solutions that solve every-day problems with the goal to make tasks easier for the end-user.</p>
+        <div className="content">
+          <h1>matthew nixon</h1>
+          <br /><br />
+          <p>hi! i'm a <mark className="highlight">full stack developer</mark> with an extensive background in management 
+            who excels at creating solutions that solve everyday problems. 
+          <br /><br />
+            proven ability to leverage full-stack knowledge and experience to build intuitive user-focused applications with scalable and well-documented code.
+          </p>
         </div>
+        <div><img className="headshot" src="./images/Headshot.jpg" /></div>
       </div>
   );
 }
